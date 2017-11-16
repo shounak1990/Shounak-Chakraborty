@@ -11,10 +11,10 @@
     <div title="page-content">
 	<ul>
 	    <li><h2>Overview</h2></li>
-		<div> ChromaClique is a tool for the reconstruction of nucleosome profiles of individual or  subpopulations of cells. Characteristics of the NOMe-sequencing assay is used by ChromaClique for deconvolution of different nucleosome profiles (chromatypes) from cell subpopulations of one NOME-seq measurement. ChromaClique uses a maximal clique enumeration algorithm on a newly defined NOMe read graph that is able to group reads according to their nucleosome profiles. </div>
+		<div> ChromaClique is a tool for the reconstruction of nucleosome profiles of individual or  subpopulations of cells. Data from NOMe-sequencing assay is used by ChromaClique for deconvolution of different nucleosome profiles (chromatypes) from cell subpopulations of one NOME-seq measurement. ChromaClique uses a maximal clique enumeration algorithm on a newly defined NOMe read graph that is able to group reads according to their nucleosome profiles. </div>
 	    <li><h2>Intallation</h2></li>
 		<div title="Installation">
-			<h4>Dependencies</h4> ChromaClique depends on boost, gnu parallel, and cmake. You can install them with a package manager of your choice.
+			<h4>Dependencies</h4> ChromaClique depends on boost, gnu parallel, and cmake and samtools. You can install them with a package manager of your choice.
 			<h5>Ubuntu:</h5>
 			<xmp>apt-get install libncurses5-dev cmake libboost-all-dev git build-essential zlib1g-dev parallel</xmp>
 			<h5>OSX 10.8.x:</h5> Please XCode and its command line tools, and with macports:
@@ -55,6 +55,9 @@ ChromaClique and its preprocessing steps can be both run manually, or using the 
 		An example ChropmaClique run would look like:
 		<xmp>bash chromaFinder.sh ./example.bam ./reference.fasta 0 0 0.05 1 chr1 70440040 70450050</xmp>
 		</div>
+	    <li><h2>Output</h2></li>
+		<div>ChromaClique produces two output files when the "analysisFiles" argument is set to 0. One of these files is a fasta file containing the sequences of the super reads along with their start and end positions, the number of reads that were merged to creatye that particular super-read and also which strand it maps to. The second file it produces is a bam file containing all the super reads aligned to the reference.
+If the "analysisFiles" argument is set to 1, then it creates two extra files called "ChromacliqueWorking.bam" and "ResultReads.txt". The first file contains all the reads that were there after the proprocessing step. The second file contains the names of the super reads along with the names of the initial reads which wer merged to create that particular super read. These files can be used to measure the accuracy of the program using simulated data. </div>
 	</ul>
     </div>
   </body>
