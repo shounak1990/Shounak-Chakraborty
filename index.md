@@ -1,8 +1,5 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/shounak1990/shounak1990.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Welcome to my wepage
+This is a place where I would like to list all my professional/academic goals and achievements. It would be sort of a CV wich I would be updating from time to time.
 
 ### Markdown
 
