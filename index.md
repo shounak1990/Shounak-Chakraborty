@@ -1,4 +1,4 @@
-## Welcome to my wepage
+## Welcome to my webpage
 This is a place where I would like to list all my professional/academic goals and achievements. It would be sort of a CV wich I would be updating from time to time.
 
 ### Markdown
